@@ -1,6 +1,10 @@
-* {
-    margin: 0px;
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Outfit;
 }
 
 .container {
@@ -9,53 +13,62 @@
     padding: 8px;
     background-color: #d5e1ef;
     text-align: center;
-    font-family: Outfit;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.circle-top {
-    height: 220px;
-    width: 220px;
-    background-color: #3685FE;
-    border-top-left-radius: 5%;
-    border-bottom-right-radius: 80%;
+.card {
+    background-color: white; 
+    border-radius: 5%; 
+    padding: 15px; 
+    display: flex; 
+    flex-direction: column;
 }
 
-.circle-bottom {
-    height: 180px;
-    width: 180px;
-    float: right;
-    clear: right;
-    background-color: #3685FE;
-    border-bottom-right-radius: 5%;
-    border-top-left-radius: 80%;
+img {
+    width: 400px; 
+    height: 400px;
 }
 
-.example-square {
-    position: absolute; 
-    /* background-color: rgb(224, 224, 224);  */
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
+.textBox {
+    width: 400px; 
+    height: 180px; 
+    background-color: #fff; 
+    padding: 20; 
+    margin-top: 10px; 
+    margin-bottom: 20px;
 }
-
-/* .img {
-    width: 200px;
-    height: 200px;
-} */
 
 h4 {
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
+    font-weight: 700;
     color: #20314b;
 }
+
 p {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 21px;
+    font-weight: 400;
     color: #555;
 }
-/* circles color: #3685FE */
-/* title color: #20314B*/
-/* text color: grey*/
+
+@media only screen and (min-width: 375px) {
+    img {
+        width: 300px; 
+        height: 300px;
+    }
+
+    .textBox {
+        width: 300px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
